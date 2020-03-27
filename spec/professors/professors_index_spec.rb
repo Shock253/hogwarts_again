@@ -11,19 +11,19 @@ RSpec.describe "As a visitor", type: :feature do
 
       visit "/professors"
 
-      within "professor-#{snape.id}" do
+      within "#professor-#{snape.id}" do
         expect(page).to have_content("Severus Snape")
         expect(page).to have_content(45)
         expect(page).to have_content("Potions")
       end
 
-      within "professor-#{hagrid.id}" do
+      within "#professor-#{hagrid.id}" do
         expect(page).to have_content("Rubeus Hagrid")
         expect(page).to have_content(38)
         expect(page).to have_content("Care of Magical Creatures")
       end
 
-      within "professor-#{lupin.id}" do
+      within "#professor-#{lupin.id}" do
         expect(page).to have_content("Remus Lupin")
         expect(page).to have_content(49)
         expect(page).to have_content("Defense Against The Dark Arts")
